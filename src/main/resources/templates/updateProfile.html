@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Profile</title>
+</head>
+<body>
+    <h2>Update Profile Form</h2>
+    <form th:action="@{/updateProfile}" th:object="${customer}" method="post">
+        <!-- Include fields from the Customer entity that you want to allow updating -->
+        <label>Name:</label>
+        <input type="text" th:field="*{name}" required><br>
+        <label>Address:</label>
+        <input type="text" th:field="*{address}" required><br>
+        <!-- Add other fields as needed -->
+        <button type="submit">Update Profile</button>
+    </form>
+</body>
+</html>

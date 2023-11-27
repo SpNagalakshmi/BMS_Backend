@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Apply Loan</title>
+</head>
+<body>
+    <h2>Loan Application Form</h2>
+    <form th:action="@{/applyLoan}" th:object="${loanApplication}" method="post">
+        <label>Loan Type:</label>
+        <input type="text" th:field="*{loanType}" required><br>
+        <label>Loan Amount:</label>
+        <input type="number" th:field="*{loanAmount}" required><br>
+        <label>Loan Date:</label>
+        <input type="text" th:field="*{loanDate}" required><br>
+        <label>Interest Rate:</label>
+        <input type="number" th:field="*{interestRate}" required><br>
+        <label>Loan Duration:</label>
+        <input type="number" th:field="*{loanDuration}" required><br>
+        <button type="submit">Apply Loan</button>
+    </form>
+</body>
+</html>
